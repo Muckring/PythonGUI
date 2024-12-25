@@ -6,16 +6,36 @@ def submit() -> None:
     username = entry.get()
     print(username)
 
+# CREATE A FUNCTION FOR THE DELETE BUTTON
+
+def delete() -> None:
+    entry.delete(0, END)
+
+# CREATE A FUNCTION FOR THE BACKSPACE BUTTON
+
+def backspace() -> None:
+    entry.delete(len(entry.get())-1, END)
+
 # CREATE ROOT
 
 root = Tk()
-root.geometry("1400x1200")
+root.geometry("700x100")
 root.title("User Inputs")
 
 #CREATE SUBMIT BUTTON
 
 submit = Button(root, text="Submit", command=submit)
-submit.pack()
+submit.pack(side = RIGHT)
+
+# CREATE DELETE BUTTON
+
+delete = Button(root, text="Delete", command=delete)
+delete.pack(side = RIGHT)
+
+# CREATE BACKSPACE BUTTON
+
+backspace = Button(root, text="Backspace", command=backspace)
+backspace.pack(side = RIGHT)
 
 # CREATE USER INPUT ENTRY(FIELD)
 entry = Entry()
