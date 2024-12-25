@@ -14,7 +14,7 @@ def delete() -> None:
 # CREATE A FUNCTION FOR THE BACKSPACE BUTTON
 
 def backspace() -> None:
-    entry.delete(len(entry.get())-1, END)
+    entry.delete(len(entry.get())-1, END) # deletes last character of a string
 
 # CREATE ROOT
 
